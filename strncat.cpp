@@ -1,23 +1,11 @@
-#include <iostream>
-void myStrncat(char* destination, const char* source, size_t num) {
+#include <stdio.h>
+#include <string.h>
 
-    while (*destination) {
-        destination++;
+char* strcat(char* destination, const char* source) {
+    char* result = destination + strlen(destination);
+    while (*source != '\0') {
+        *result++ = *source++;
     }
-        while (*source && num--) {
-        *destination++ = *source++;
-    }
-
-    *destination = '\0';
-}
-
-int main() {
-    char destination[100] = "Hello, ";
-    const char* source = "world!";
-    size_t num = 5;
-    
-    myStrncat(destination, source, num);
-    
-    std::cout << destination << std::endl;
-    return 0;
+    *result = '\0';
+    return destination;
 }
