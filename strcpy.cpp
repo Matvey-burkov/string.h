@@ -2,7 +2,7 @@
 
 int main() {
     const char* source = "Пример строки для копирования";
-    char destination[100]; // Здесь указываем максимальную длину строки
+    char destination[100]; 
 
     int i = 0;
     while (source[i] != '\0') {
@@ -10,7 +10,7 @@ int main() {
         i++;
     }
 
-    destination[i] = '\0'; // Обязательно завершаем строку нулевым символом
+    destination[i] = '\0'; 
 
     std::cout << "Скопированная строка: " << destination << std::endl;
 
