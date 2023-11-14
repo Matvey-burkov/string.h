@@ -1,0 +1,12 @@
+#include <iostream>
+
+// Функция ищет первое вхождение символа `c` в строке `s`
+char* strchr(const char* s, char c) {
+    while (*s != '\0') {
+        if (*s == c) {
+            return const_cast<char*>(s);  // Преобразуем const char* в char*
+        }
+        s++;
+    }
+    return nullptr;  // Возвращаем nullptr, если символ не найден
+}
